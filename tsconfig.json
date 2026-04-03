@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["nuxt"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.vue",
+    "**/*.js",
+    "**/*.mjs",
+    ".nuxt/nuxt.d.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

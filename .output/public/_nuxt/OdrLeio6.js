@@ -1,0 +1,1 @@
+import{K as s,L as u,M as r,N as o,O as c,P as i}from"./DaH15cKS.js";function a(t){const e=t||u();return e?.ssrContext?.head||e?.runWithContext(()=>{if(r())return o(c)})}function d(t,e={}){const n=a(e.nuxt);if(n)return i(t,{head:n,...e})}function f(t,e={}){const n=a(e.nuxt);if(n)return s(t,{head:n,...e})}export{f as a,d as u};

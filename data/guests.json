@@ -1,0 +1,40 @@
+{
+  "guests": [
+    {
+      "id": "ivan-petrov",
+      "firstName": "Иван",
+      "lastName": "Петров",
+      "role": "Крутой мужик",
+      "tableNumber": 1
+    },
+    {
+      "id": "anna-sidorova",
+      "firstName": "Анна",
+      "lastName": "Сидорова",
+      "role": "Крутая женщина",
+      "tableNumber": 2
+    },
+    {
+      "id": "dmitry-kozlov",
+      "firstName": "Дмитрий",
+      "lastName": "Козлов",
+      "role": "Козлина",
+      "tableNumber": 1
+    },
+    {
+      "id": "olga-volkova",
+      "firstName": "Ольга",
+      "lastName": "Волкова",
+      "role": "Волчица",
+      "tableNumber": 2
+    },
+    {
+      "id": "sergey-smirnov",
+      "firstName": "Сергей",
+      "lastName": "Смирнов",
+      "fullName": "Сергей Смирнов",
+      "role": "Серёга)",
+      "tableNumber": 3
+    }
+  ]
+}

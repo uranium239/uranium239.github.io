@@ -1,0 +1,13 @@
+{
+  "wedding": {
+    "brideName": "Таня",
+    "groomName": "Илья",
+    "date": "2025-06-15",
+    "time": "14:00",
+    "venue": {
+      "name": "Загородный клуб «Золотое поле»",
+      "address": "ул. Луговая, 25, пос. Заречье",
+      "mapUrl": "https://yandex.ru/maps"
+    }
+  }
+}
