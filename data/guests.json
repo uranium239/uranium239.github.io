@@ -1,11 +1,53 @@
 {
   "guests": [
     {
-      "id": "ivan-petrov",
-      "firstName": "Иван",
-      "lastName": "Петров",
+      "id": "babishka",
+      "firstName": "Бабушка",
+      "lastName": "Любимая",
       "role": "",
-      "tableNumber": 1
+      "tableNumber": 0
+    },
+    {
+      "id": "krivonosova",
+      "firstName": "Анастасия",
+      "lastName": "Кривоносова",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "reznikovy",
+      "firstName": "Елена и Владимир",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "osipovy",
+      "firstName": "Семья Осиповых",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "naumova-nesterova",
+      "firstName": "Светлана, Евгения и Валерия",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "pasha-katia-bogdan",
+      "firstName": "Павел, Екатерина и Богдан",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "rudakovy",
+      "firstName": "Александр и Людмила",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
     },
     {
       "id": "andrey-lazutkin",
@@ -15,16 +57,65 @@
       "tableNumber": 0
     },
     {
-      "id": "dmitry-kozlov",
-      "firstName": "Дмитрий",
-      "lastName": "Козлов",
+      "id": "sergay-zavarzin",
+      "firstName": "Сергей",
+      "lastName": "Заварзин",
       "role": "",
       "tableNumber": 0
     },
     {
-      "id": "olga-volkova",
-      "firstName": "Ольга",
-      "lastName": "Волкова",
+      "id": "kotiki",
+      "firstName": "Анастасия и Егор",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 1
+    },
+    {
+      "id": "hlebobulochni",
+      "firstName": "Денис",
+      "lastName": "Бубликов",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "araslanovy",
+      "firstName": "Денис и Дарья",
+      "lastName": " ",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "slaffka",
+      "firstName": "Слава",
+      "lastName": "Анисимов",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "belorus",
+      "firstName": "Денис",
+      "lastName": "Бубликов",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "araslanovy",
+      "firstName": "Михаил",
+      "lastName": "Здрок",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "belovy",
+      "firstName": "Анастасия и Эдуард",
+      "lastName": "",
+      "role": "",
+      "tableNumber": 0
+    },
+    {
+      "id": "shirokovy",
+      "firstName": "Семья Широковых",
+      "lastName": " ",
       "role": "",
       "tableNumber": 0
     }
