@@ -149,24 +149,12 @@ const error = computed(() => {
         <h2 class="section-title">Программа дня</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <span class="timeline-time">14:00</span>
-            <span class="timeline-text">Сбор гостей</span>
+            <span class="timeline-time">16:30</span>
+            <span class="timeline-text">начало сбора гостей</span>
           </div>
           <div class="timeline-item">
-            <span class="timeline-time">14:30</span>
-            <span class="timeline-text">Церемония бракосочетания</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-time">16:00</span>
-            <span class="timeline-text">Праздничный ужин</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-time">18:00</span>
-            <span class="timeline-text">Тосты и поздравления</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-time">20:00</span>
-            <span class="timeline-text">Танцы</span>
+            <span class="timeline-time">17:00</span>
+            <span class="timeline-text">начало торжества</span>
           </div>
         </div>
       </section>
@@ -174,21 +162,15 @@ const error = computed(() => {
       <!-- Dress Code -->
       <section class="section dress-code-section">
         <h2 class="section-title">Дресс-код</h2>
-        <p class="dress-code-main">Элегантный / Formal</p>
-        <p class="dress-code-hint">Просим избегать белого и чёрного цветов</p>
-        <div class="dress-icons">
-          <span>👗</span>
-          <span>🤵</span>
-          <span>👔</span>
-        </div>
+        <p class="dress-code-main">Элегантный</p>
+        <p class="dress-code-hint">Мы знаем - вы прекрасно в любом наряде. Сияйте!</p>
       </section>
 
       <!-- Gifts -->
       <section class="section gifts-section">
-        <h2 class="section-title">Подарки</h2>
+        <h2 class="section-title">Пожелания</h2>
         <p class="gifts-text">
-          Мы будем рады любому подарку, но если вы хотите порадовать нас
-          денежным вкладом в наше будущее, мы будем особенно благодарны 💝
+          В качестве подарка будем благодарны за вклад в бюджет нашей молодой семьи 💝
         </p>
       </section>
 
@@ -197,11 +179,19 @@ const error = computed(() => {
         <h2 class="section-title">Ваш стол</h2>
         <div class="table-number">{{ guest.tableNumber }}</div>
       </section>
+
+      <section class="section gifts-section">
+        <p class="gifts-text">
+          Если вы подготовили творческий подарок или сюрприз, пожалуйста предупредите  нашего ведущего - Олега 9308334624. 
+          Он поможет вам реализовать вашу задумку и  внести ее в программу
+        </p>
+      </section>
+
     </main>
 
     <!-- Footer -->
     <!-- <footer class="footer">
-      <p class="hashtag">#ТаняИИлья2025</p>
+      <p class="hashtag">#ТаняИИлья2026</p>
     </footer> -->
   </div>
 </template>
@@ -374,7 +364,7 @@ const error = computed(() => {
   height: 180px;
   background-image: url("/place-photo.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
 }
 
 .venue-info {
