@@ -121,7 +121,7 @@ const error = computed(() => {
           <span class="guest-name">{{ guest.firstName }}</span
           >!
         </p>
-        <p v-if="guest?.role" class="role">Нам очень хочется, что бы в этот важный для нас день, Вы были с нами!
+        <p class="role">Нам очень хочется, что бы в этот важный для нас день, Вы были с нами!
          Приглашаем вас на нашу свадьбу
         </p>
       </section>
