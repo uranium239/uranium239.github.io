@@ -121,7 +121,9 @@ const error = computed(() => {
           <span class="guest-name">{{ guest.firstName }}</span
           >!
         </p>
-        <p v-if="guest?.role" class="role">{{ guest?.role }}</p>
+        <p v-if="guest?.role" class="role">Нам очень хочется, что бы в этот важный для нас день, Вы были с нами!
+         Приглашаем вас на нашу свадьбу
+        </p>
       </section>
 
       <!-- Hero divider -->
@@ -150,7 +152,7 @@ const error = computed(() => {
         <div class="timeline">
           <div class="timeline-item">
             <span class="timeline-time">16:30</span>
-            <span class="timeline-text">начало сбора гостей</span>
+            <span class="timeline-text">сбор гостей</span>
           </div>
           <div class="timeline-item">
             <span class="timeline-time">17:00</span>
@@ -182,8 +184,8 @@ const error = computed(() => {
 
       <section class="section gifts-section">
         <p class="gifts-text">
-          Если вы подготовили творческий подарок или сюрприз, пожалуйста предупредите  нашего ведущего - Олега 9308334624. 
-          Он поможет вам реализовать вашу задумку и  внести ее в программу
+          Если вы подготовили творческий подарок или сюрприз, пожалуйста предупредите нашего ведущего - Олега 8 (930) 833 46 24. 
+          Он поможет Вам реализовать вашу задумку и  внести ее в программу
         </p>
       </section>
 
@@ -321,7 +323,6 @@ const error = computed(() => {
 
 .guest-name {
   font-weight: 600;
-  color: #8b7355;
 }
 
 .role {
