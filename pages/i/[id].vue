@@ -244,7 +244,7 @@ const error = computed(() => {
   font-size: 0.9rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #cfcbc3;
+  color: #c9a86c;
   margin: 0 0 1rem;
   font-weight: 500;
 }
@@ -254,7 +254,7 @@ const error = computed(() => {
   font-weight: 400;
   margin: 0 0 1.5rem;
   line-height: 1.1;
-  color: #cfcbc3;
+  color: #c9a86c;
 }
 
 .amp {
@@ -309,6 +309,7 @@ const error = computed(() => {
 
 .greeting {
   text-align: center;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
