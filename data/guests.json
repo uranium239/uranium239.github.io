@@ -5,12 +5,12 @@
       "firstName": "Иван",
       "lastName": "Петров",
       "role": "",
-      "tableNumber": 0
+      "tableNumber": 1
     },
     {
-      "id": "anna-sidorova",
-      "firstName": "Анна",
-      "lastName": "Сидорова",
+      "id": "andrey-lazutkin",
+      "firstName": "Андрей",
+      "lastName": "Лазуткин",
       "role": "",
       "tableNumber": 0
     },

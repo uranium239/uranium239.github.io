@@ -244,7 +244,7 @@ const error = computed(() => {
   font-size: 0.9rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #c9a86c;
+  color: #0c1b14;
   margin: 0 0 1rem;
   font-weight: 500;
 }
@@ -254,13 +254,13 @@ const error = computed(() => {
   font-weight: 400;
   margin: 0 0 1.5rem;
   line-height: 1.1;
-  color: #c9a86c;
+  color: #d28b0a;
 }
 
 .amp {
   display: inline-block;
   margin: 0 0.3rem;
-  color: #c9a86c;
+  color: #293f36;
   font-style: italic;
 }
 
