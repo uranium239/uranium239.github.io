@@ -66,7 +66,7 @@
     {
       "id": "kotiki",
       "firstName": "Анастасия и Егор",
-      "gender": "helicopter",
+      "gender": "family",
       "lastName": " ",
       "tableNumber": 0
     },
@@ -81,7 +81,7 @@
       "id": "araslanovy",
       "firstName": "Денис и Дарья",
       "lastName": " ",
-      "gender": "helicopter",
+      "gender": "family",
       "tableNumber": 0
     },
     {
@@ -101,7 +101,7 @@
     {
       "id": "belovy",
       "firstName": "Анастасия и Эдуард",
-      "gender": "helicopter",
+      "gender": "family",
       "lastName": "",
       "tableNumber": 0
     },

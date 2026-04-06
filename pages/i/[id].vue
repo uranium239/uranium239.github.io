@@ -18,7 +18,7 @@ const getGenderEnding = () => {
   const gender = guest.value?.gender;
   if (gender === "male") return "ой";
   if (gender === "female") return "ая";
-  if (gender === 'helicopter') return 'ие';
+  if (gender === "family") return "ие";
   return "";
 }
 
