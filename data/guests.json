@@ -4,119 +4,119 @@
       "id": "babishka",
       "firstName": "Бабушка",
       "lastName": "Любимая",
-      "role": "",
+      "gender": "female",
       "tableNumber": 0
     },
     {
       "id": "krivonosova",
       "firstName": "Анастасия",
       "lastName": "Кривоносова",
-      "role": "",
+      "gender": "female",
       "tableNumber": 0
     },
     {
       "id": "reznikovy",
       "firstName": "Елена и Владимир",
       "lastName": " ",
-      "role": "",
+      "gender": "helicopter",
       "tableNumber": 0
     },
     {
       "id": "osipovy",
       "firstName": "Семья Осиповых",
+      "gender": "female",
       "lastName": " ",
-      "role": "",
       "tableNumber": 0
     },
     {
       "id": "naumova-nesterova",
       "firstName": "Светлана, Евгения и Валерия",
       "lastName": " ",
-      "role": "",
+      "gender": "family",
       "tableNumber": 0
     },
     {
       "id": "pasha-katia-bogdan",
       "firstName": "Павел, Екатерина и Богдан",
       "lastName": " ",
-      "role": "",
+      "gender": "family",
       "tableNumber": 0
     },
     {
       "id": "rudakovy",
       "firstName": "Александр и Людмила",
+      "gender": "family",
       "lastName": " ",
-      "role": "",
       "tableNumber": 0
     },
     {
       "id": "andrey-lazutkin",
       "firstName": "Андрей",
       "lastName": "Лазуткин",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "sergay-zavarzin",
       "firstName": "Сергей",
       "lastName": "Заварзин",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "kotiki",
       "firstName": "Анастасия и Егор",
+      "gender": "helicopter",
       "lastName": " ",
-      "role": "",
       "tableNumber": 1
     },
     {
       "id": "hlebobulochni",
       "firstName": "Денис",
       "lastName": "Бубликов",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "araslanovy",
       "firstName": "Денис и Дарья",
       "lastName": " ",
-      "role": "",
+      "gender": "helicopter",
       "tableNumber": 0
     },
     {
       "id": "slaffka",
       "firstName": "Слава",
       "lastName": "Анисимов",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "belorus",
       "firstName": "Денис",
       "lastName": "Бубликов",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "araslanovy",
       "firstName": "Михаил",
       "lastName": "Здрок",
-      "role": "",
+      "gender": "male",
       "tableNumber": 0
     },
     {
       "id": "belovy",
       "firstName": "Анастасия и Эдуард",
+      "gender": "helicopter",
       "lastName": "",
-      "role": "",
       "tableNumber": 0
     },
     {
       "id": "shirokovy",
       "firstName": "Семья Широковых",
+      "gender": "female",
       "lastName": " ",
-      "role": "",
       "tableNumber": 0
     }
   ]

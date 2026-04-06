@@ -1,14 +1,25 @@
 <script setup lang="ts">
-import guestsData from "~/data/guests.json";
 import assetsData from "~/data/assets.json";
+import guestsData from "~/data/guests.json";
+
+type Gender = "male" | "female" | "helicopter";
 
 interface Guest {
   id: string;
   firstName: string;
   lastName: string;
+  gender: Gender;
   photoId?: string;
   role?: string;
   tableNumber?: number;
+}
+
+const getGenderEnding = () => {
+  const gender = guest.value?.gender;
+  if (gender === "male") return "ой";
+  if (gender === "female") return "ая";
+  if (gender === 'helicopter') return 'ие';
+  return "";
 }
 
 interface Venue {
@@ -31,27 +42,36 @@ const guestId = route.params.id as string;
 const wedding = assetsData.wedding as WeddingData;
 const venue = computed(() => wedding.venue);
 
+const targetDate = new Date("2026-09-05T16:30:00");
+const countdown = ref(0);
+
+onMounted(() => {
+  const now = new Date().getTime();
+  const distance = targetDate.getTime() - now;
+  countdown.value = distance;
+})
+
+const formattedCountdown = computed(() => {
+  const days = Math.floor(countdown.value / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((countdown.value % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((countdown.value % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((countdown.value % (1000 * 60)) / 1000);
+  return { days, hours, minutes, seconds };
+})
+
+const getDateEnding = () => {
+  const days = formattedCountdown.value.days;
+  let daysLastDigit = Number(days.toString()[days.toString().length - 1]);
+  if (isNaN(daysLastDigit)) return "дней";
+
+  if (daysLastDigit === 1) return "день";
+  if (daysLastDigit > 1 && daysLastDigit < 5) return "дня";
+  return "дней";
+}
+
 // Find guest by ID
 const guest = computed<Guest | null>(() => {
   return guestsData.guests.find((g: Guest) => g.id === guestId) || null;
-});
-
-const formattedDate = computed(() => {
-  const date = new Date(wedding.date);
-  return date.toLocaleDateString("ru-RU", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-});
-
-const formattedTime = computed(() => {
-  const [hours, minutes] = wedding.time.split(":");
-  const hour = parseInt(hours, 10);
-  const ampm = hour >= 12 ? "PM" : "AM";
-  const hour12 = hour % 12 || 12;
-  return `${hour12}:${minutes} ${ampm}`;
 });
 
 // Generate unique metadata for each guest
@@ -70,10 +90,10 @@ useSeoMeta({
   title: () => pageTitle.value,
   ogTitle: () => pageTitle.value,
   description: () =>
-    `Приглашение на свадьбу ${wedding.brideName} и ${wedding.groomName} — ${formattedDate.value} года`,
+    `Приглашение на свадьбу ${wedding.brideName} и ${wedding.groomName} — 05.09.2026`,
   ogDescription: () =>
-    `Приглашение на свадьбу ${wedding.brideName} и ${wedding.groomName} — ${formattedDate.value} года`,
-  ogImage: () => "/header-bg.jpg",
+    `Приглашение на свадьбу ${wedding.brideName} и ${wedding.groomName} — 05.09.2026`,
+  ogImage: () => "/preview.png",
   ogType: "website",
   twitterCard: "summary_large_image",
 });
@@ -94,12 +114,13 @@ const error = computed(() => {
       <div class="hero-image"></div>
       <div class="hero-content backdrop-blur-sm">
         <p class="pre-title">Приглашение на свадьбу</p>
-        <h1 class="names">
-          {{ wedding.brideName }} <span class="amp">&</span>
-          {{ wedding.groomName }}
-        </h1>
-        <p class="date">{{ formattedDate }}</p>
-        <p class="time">{{ formattedTime }}</p>
+        <div class="hero-names-section">
+          <h1 class="names">Таня</h1>
+          <span class="amp names">&</span> 
+          <h1 class="names">Илья</h1>
+        </div>
+        <p class="date">{{ wedding.date }}</p>
+        <p class="time">{{ wedding.time }}</p>
       </div>
       <div class="hero-decor"></div>
     </section>
@@ -117,18 +138,20 @@ const error = computed(() => {
       <!-- Guest greeting -->
       <section v-if="guest" class="greeting">
         <p class="greeting-text">
-          Дорог{{ guest.firstName.endsWith("а") ? "ая" : "ой" }}
+          Дорог{{ getGenderEnding() }}
           <span class="guest-name">{{ guest.firstName }}</span
           >!
         </p>
-        <p class="role">Нам очень хочется, что бы в этот важный для нас день, Вы были с нами!
+        <p class="role">Нам очень хочется, чтобы в этот важный для нас день, Вы были с нами!
          Приглашаем вас на нашу свадьбу
         </p>
       </section>
 
       <!-- Hero divider -->
       <div class="divider">
-        <span class="divider-icon">💕</span>
+        <span class="divider-icon">
+          <img src="/heart.png" alt="Сердечко" />
+        </span>
       </div>
 
       <!-- Venue with image -->
@@ -184,9 +207,18 @@ const error = computed(() => {
 
       <section class="section gifts-section">
         <p class="gifts-text">
-          Если вы подготовили творческий подарок или сюрприз, пожалуйста предупредите нашего ведущего - Олега 8 (930) 833 46 24. 
+          Если вы подготовили творческий подарок или сюрприз, пожалуйста предупредите нашего ведущего - Олега <a href="tel:+79308334624">8 (930) 833 46 24</a>.
           Он поможет Вам реализовать вашу задумку и  внести ее в программу
         </p>
+      </section>
+
+      <section class="section countdown-section">
+        <p class="countdown-header">До встречи осталось:</p>
+        <p class="countdown">
+          {{ formattedCountdown.days }} {{ getDateEnding() }}
+        </p>
+        <p class="countdown-congratulate">С нетерпением ждём встречи!</p>
+        <p class="countdown-post">—С любовью, Татьяна и Илья </p>
       </section>
 
     </main>
@@ -199,6 +231,9 @@ const error = computed(() => {
 </template>
 
 <style scoped>
+a {
+  color: rgb(6, 52, 180)
+}
 .invitation-page {
   min-height: 100vh;
   background: #faf9f7;
@@ -209,6 +244,7 @@ const error = computed(() => {
 .hero {
   position: relative;
   min-height: 70vh;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,16 +273,33 @@ const error = computed(() => {
 
 .hero-content {
   position: relative;
+  background-color: rgba(53, 53, 53, 0.65);
+  border-radius: 2rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
   z-index: 1;
   text-align: center;
   padding: 3rem 1.5rem;
 }
 
+.hero-names-section {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .hero-names-section {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
 .pre-title {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #0c1b14;
+  /* text-transform: uppercase; */
+  color: #c2c2c2;
   margin: 0 0 1rem;
   font-weight: 500;
 }
@@ -254,15 +307,15 @@ const error = computed(() => {
 .names {
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 400;
-  margin: 0 0 1.5rem;
+  /* margin: 0 0 1.5rem; */
   line-height: 1.1;
-  color: #d28b0a;
+  color: #d1ad6a;
 }
 
 .amp {
   display: inline-block;
   margin: 0 0.3rem;
-  color: #293f36;
+  color: #cfcbc3;
   font-style: italic;
 }
 
@@ -322,15 +375,15 @@ const error = computed(() => {
 }
 
 .guest-name {
-  font-weight: 600;
+  /* font-weight: 600; */
 }
 
 .role {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   color: #999;
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  /* text-transform: uppercase; */
+  letter-spacing: -2%;
 }
 
 .divider {
@@ -343,16 +396,26 @@ const error = computed(() => {
   opacity: 0.6;
 }
 
+.divider-icon img {
+  display: block;
+  width: 4rem;
+  margin: 0 auto;
+}
+
 .section {
   margin-bottom: 2.5rem;
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .section-title {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 400;
-  margin: 0 0 1.5rem;
   color: #2d2d2d;
+  margin: 0 0 1.5rem;
 }
 
 .venue-card {
@@ -497,5 +560,37 @@ const error = computed(() => {
 .hashtag {
   font-size: 1.2rem;
   margin: 0;
+}
+
+.countdown-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.countdown-header {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #2d2d2d;
+  margin: 0 0 0.5rem;
+}
+
+.countdown {
+  font-size: 1.6rem;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.countdown-congratulate {
+  font-size: 1.2rem;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.countdown-post {
+  margin-top: 1rem;
+  align-self: flex-end;
+  color: #747474;
+  font-style: italic;
 }
 </style>

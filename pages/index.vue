@@ -11,9 +11,13 @@
   <div class="home-page">
     <section class="hero">
       <div class="hero-image"></div>
-      <div class="hero-content backdrop-blur-sm">
+      <div class="hero-content">
         <p class="pre-title">Приглашение на свадьбу</p>
-        <h1 class="names">Таня <span class="amp">&</span> Илья</h1>
+        <div class="hero-names-section">
+          <h1 class="names">Таня</h1>
+           <span class="amp names">&</span> 
+          <h1 class="names">Илья</h1>
+        </div>
         <p class="date">15 июня 2025</p>
         <p class="time">14:00</p>
       </div>
@@ -46,6 +50,7 @@
 .hero {
   position: relative;
   min-height: 70vh;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,10 +78,26 @@
 }
 
 .hero-content {
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 2rem;
   position: relative;
   z-index: 1;
   text-align: center;
   padding: 3rem 1.5rem;
+}
+
+.hero-names-section {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .hero-names-section {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
 
 .pre-title {
@@ -91,7 +112,7 @@
 .names {
   font-size: clamp(3rem, 10vw, 5rem);
   font-weight: 400;
-  margin: 0 0 1.5rem;
+  /* margin: 0 0 1.5rem; */
   line-height: 1.1;
   color: #cfcbc3;
 }

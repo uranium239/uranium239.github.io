@@ -1,13 +1,13 @@
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/h3/dist/index.mjs';
-import { joinURL } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/@nuxt/nitro-server/node_modules/vue/server-renderer/index.mjs';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { getResponseStatusText, getResponseStatus, getQuery, createError, appendResponseHeader } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/h3/dist/index.mjs';
+import { joinURL } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/ufo/dist/index.mjs';
+import { renderToString } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue/server-renderer/index.mjs';
 import { b as buildAssetsURL, u as useRuntimeConfig, a as useStorage, d as defineRenderHandler, p as publicAssetsURL, g as getRouteRules, c as useNitroApp } from '../nitro/nitro.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unhead/dist/server.mjs';
-import { stringify, uneval } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/devalue/index.js';
-import { FlatMetaPlugin, DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unhead/dist/plugins.mjs';
-import { walkResolver } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unhead/dist/utils.mjs';
-import { isRef, toValue, hasInjectionContext, inject, ref, watchEffect, getCurrentInstance, onBeforeUnmount, onDeactivated, onActivated } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/@unhead/vue/node_modules/vue/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/unhead/dist/server.mjs';
+import { stringify, uneval } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/devalue/index.js';
+import { FlatMetaPlugin, DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/unhead/dist/plugins.mjs';
+import { walkResolver } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/unhead/dist/utils.mjs';
+import { isRef, toValue, hasInjectionContext, inject, ref, watchEffect, getCurrentInstance, onBeforeUnmount, onDeactivated, onActivated } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue/index.mjs';
 
 const VueResolver = (_, value) => {
   return isRef(value) ? toValue(value) : value;
@@ -88,7 +88,7 @@ function createHead(options = {}) {
 
 const NUXT_PAYLOAD_EXTRACTION = true;
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Приглашение на свадьбу"}],"link":[{"rel":"icon","type":"image/svg+xml","href":"/vite.svg"}],"style":[],"script":[],"noscript":[],"title":"Свадьба Тани и Ильи"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"Приглашение на свадьбу"},{"name":"og:image","content":"/preview.png"}],"link":[{"rel":"icon","type":"image/png","href":"/heart.png"}],"style":[],"script":[],"noscript":[],"title":"Свадьба Тани и Ильи"};
 
 const appRootTag = "div";
 

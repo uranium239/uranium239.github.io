@@ -1,28 +1,28 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, getCurrentInstance, defineComponent, ref, h, Suspense, Fragment, useSSRContext, createApp, provide, shallowReactive, mergeProps, onErrorCaptured, onServerPrefetch, unref, createVNode, resolveDynamicComponent, reactive, effectScope, defineAsyncComponent, getCurrentScope, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/vue/index.mjs';
-import { $fetch } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/ofetch/dist/node.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { hasInjectionContext, inject, getCurrentInstance, defineComponent, ref, h, Suspense, Fragment, useSSRContext, createApp, provide, shallowReactive, mergeProps, onErrorCaptured, onServerPrefetch, unref, createVNode, resolveDynamicComponent, reactive, effectScope, defineAsyncComponent, getCurrentScope, toRef, shallowRef, isReadonly, isRef, isShallow, isReactive, toRaw } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue/index.mjs';
+import { $fetch } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/ofetch/dist/node.mjs';
 import { e as baseURL } from '../nitro/nitro.mjs';
-import { createHooks } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/hookable/dist/index.mjs';
-import { getContext, executeAsync } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unctx/dist/index.mjs';
-import { sanitizeStatusCode, createError as createError$1, appendHeader } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/h3/dist/index.mjs';
-import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/vue-router/vue-router.node.mjs';
-import { defu } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/defu/dist/defu.mjs';
-import { parseURL, encodePath, decodePath, hasProtocol, isScriptProtocol, joinURL, withQuery } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/ufo/dist/index.mjs';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/vue/server-renderer/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/destr/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/node-mock-http/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unstorage/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unstorage/drivers/fs.mjs';
+import { createHooks } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/hookable/dist/index.mjs';
+import { getContext, executeAsync } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/unctx/dist/index.mjs';
+import { sanitizeStatusCode, createError as createError$1, appendHeader } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/h3/dist/index.mjs';
+import { RouterView, createMemoryHistory, createRouter, START_LOCATION } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue-router/vue-router.node.mjs';
+import { defu } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/defu/dist/defu.mjs';
+import { parseURL, encodePath, decodePath, hasProtocol, isScriptProtocol, joinURL, withQuery } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/ufo/dist/index.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderSuspense, ssrRenderVNode } from 'file:///home/nucen/dev/uranium239.github.io/node_modules/vue/server-renderer/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/destr/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/node-mock-http/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/unstorage/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/unstorage/drivers/fs.mjs';
 import 'node:crypto';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unstorage/drivers/fs-lite.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/unstorage/drivers/lru-cache.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/ohash/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/klona/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/scule/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/radix3/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/unstorage/drivers/fs-lite.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/unstorage/drivers/lru-cache.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/ohash/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/klona/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/scule/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/radix3/dist/index.mjs';
 import 'node:fs';
 import 'node:url';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/pathe/dist/index.mjs';
-import 'file:///home/nucen/dev/personal/uranium239.github.io/node_modules/ipx/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/pathe/dist/index.mjs';
+import 'file:///home/nucen/dev/uranium239.github.io/node_modules/ipx/dist/index.mjs';
 
 if (!globalThis.$fetch) {
   globalThis.$fetch = $fetch.create({
@@ -419,12 +419,12 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-DZ99BU11.mjs')
+    component: () => import('./index-XFnC9Jk7.mjs')
   },
   {
     name: "i-id",
     path: "/i/:id()",
-    component: () => import('./_id_-B4g9fEJp.mjs')
+    component: () => import('./_id_-BVY6czlP.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
@@ -937,8 +937,8 @@ const _sfc_main$1 = {
     const statusText = _error.statusMessage ?? (is404 ? "Page Not Found" : "Internal Server Error");
     const description = _error.message || _error.toString();
     const stack = void 0;
-    const _Error404 = defineAsyncComponent(() => import('./error-404-CXC399jm.mjs'));
-    const _Error = defineAsyncComponent(() => import('./error-500-CsCMaht1.mjs'));
+    const _Error404 = defineAsyncComponent(() => import('./error-404-D6AEux-4.mjs'));
+    const _Error = defineAsyncComponent(() => import('./error-500-3WBHJNNk.mjs'));
     const ErrorTemplate = is404 ? _Error404 : _Error;
     return (_ctx, _push, _parent, _attrs) => {
       _push(ssrRenderComponent(unref(ErrorTemplate), mergeProps({ status: unref(status), statusText: unref(statusText), statusCode: unref(status), statusMessage: unref(statusText), description: unref(description), stack: unref(stack) }, _attrs), null, _parent));

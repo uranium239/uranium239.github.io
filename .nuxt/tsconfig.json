@@ -128,7 +128,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/c0e821e2-485f-4434-a30b-3581142a07d8.json"
+        "./manifest/meta/fda15358-2a9c-46a1-b760-59630e515e1b.json"
       ],
       "#components": [
         "./components"
@@ -153,7 +153,7 @@
     "noUncheckedIndexedAccess": false,
     "forceConsistentCasingInFileNames": true,
     "noImplicitOverride": true,
-    "module": "ESNext",
+    "module": "preserve",
     "noEmit": true,
     "lib": [
       "ESNext",
