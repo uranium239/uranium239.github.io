@@ -424,7 +424,7 @@ const _routes = [
   {
     name: "i-id",
     path: "/i/:id()",
-    component: () => import('./_id_-BVY6czlP.mjs')
+    component: () => import('./_id_-BzjwTvvX.mjs')
   }
 ];
 const ROUTE_KEY_PARENTHESES_RE = /(:\w+)\([^)]+\)/g;
