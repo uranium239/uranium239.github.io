@@ -187,7 +187,7 @@ const error = computed(() => {
       <!-- Dress Code -->
       <section class="section dress-code-section">
         <h2 class="section-title">Дресс-код</h2>
-        <p class="dress-code-hint">Мы знаем - вы прекрасно в любом наряде. Сияйте!</p>
+        <p class="dress-code-hint">Мы знаем - вы прекрасны в любом наряде. Сияйте!</p>
       </section>
 
       <!-- Gifts -->
