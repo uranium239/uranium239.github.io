@@ -1,6 +1,13 @@
 {
   "guests": [
     {
+      "id": "parents",
+      "firstName": "Родители",
+      "lastName": "",
+      "gender": "helicopter",
+      "tableNumber": 0
+    },
+    {
       "id": "babishka",
       "firstName": "Бабушка",
       "lastName": "Любимая",
