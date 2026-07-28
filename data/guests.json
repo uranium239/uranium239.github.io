@@ -111,6 +111,13 @@
       "gender": "female",
       "lastName": " ",
       "tableNumber": 0
+    },
+    {
+      "id": "ispravnikovy",
+      "firstName": "Семья Исправниковых",
+      "gender": "female",
+      "lastName": " ",
+      "tableNumber": 0
     }
   ]
 }
